@@ -1,1 +1,1 @@
-web: python app.py
+web: gunicorn resetpass.app:app --log-file -

@@ -15,7 +15,8 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def index():
-  return render_template('index.html')
+  email = request.args.get('email', default='')
+  return render_template('index.html', email=email)
   
 
 
