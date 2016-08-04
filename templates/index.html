@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block content %}
+<article class="content__body">
+  <header>
+	<h1 class="heading-large">Reset Password Request</h1>
+  </header>
+  
+  <form method="POST" autocomplete="off">
+    <p class="form-hint">While we roll out the new login system, please use this form to 
+      request a change of password. This will usually be actioned by the next working day.
+      For more urgent issues such as an account being compromised, please e-mail 
+      <a href="mailto:gov-uk-pay-support@digital.cabinet-office.gov.uk">
+      gov-uk-pay-support@digital.cabinet-office.gov.uk</a>
+    </p>
+    
+    <br>
+	
+    <label for="email">
+    	<legend class="form-label-bold">Login E-mail</legend>
+      <input type="text" class="form-control input-medium" name="email" id="email" value="" required>
+    </label>
+    
+    <br>
+    
+    <label for="password">
+    	<legend class="form-label-bold">New Password</legend>
+      <legend class="form-label">The team will not see the password you enter, it will be immediately encrypted.
+       We recommend using a combination of upper/lower case, numbers and punctuation.</legend>
+      <input type="password" class="form-control input-medium" name="password" id="password" value="" required>
+    </label>
+    
+    <br>
+    
+    <label for="phone">
+    	<legend class="form-label-bold">Mobile Phone</legend>
+      <legend class="form-label">This will be used for verification and two-factor set-up</legend>
+      <input type="text" class="form-control input-medium" name="phone" id="phone" value="" required>
+    </label>
+	
+    <p><input type="submit" id="next" class="button" value="Submit Request"></p>
+  </form>
+</article>
+{% endblock %}
